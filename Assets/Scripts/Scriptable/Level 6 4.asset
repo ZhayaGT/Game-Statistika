@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b563647d7a82f784bbaf2f39cb9fb2e9, type: 3}
+  m_Name: Level 6 4
+  m_EditorClassIdentifier: 
+  questionImage: {fileID: 21300000, guid: 1d5e24e8484296748994cd7f8ece96d8, type: 3}
+  questionText: 'Tentukan nilai jangkauan data pada angka berikut
+
+    48, 50, 51,
+    55, 66, 68, 70, 70, 86'
+  answerOptions:
+  - 38
+  - 31
+  - 26
+  - 16
+  correctAnswerIndex: 0
+  solutionImage: {fileID: 21300000, guid: a7660dd30f17ae04d9727866bcad030c, type: 3}

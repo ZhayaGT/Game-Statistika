@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b563647d7a82f784bbaf2f39cb9fb2e9, type: 3}
+  m_Name: Level 3 1
+  m_EditorClassIdentifier: 
+  questionImage: {fileID: 21300000, guid: 1d5e24e8484296748994cd7f8ece96d8, type: 3}
+  questionText: "11 siswa kelas VII mendapat nilai \n75, 82, 88, 79, 91, 86, 84,
+    90, 92, 77, dan 83 \npada tes bahasa inggris. Tentukan nilai median siswa tersebut!"
+  answerOptions:
+  - 75
+  - 84
+  - 79
+  - 90
+  correctAnswerIndex: 1
+  solutionImage: {fileID: 21300000, guid: d45c1059c7509b942adeeebc1ab9dd1d, type: 3}

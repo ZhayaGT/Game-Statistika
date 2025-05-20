@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b563647d7a82f784bbaf2f39cb9fb2e9, type: 3}
+  m_Name: Level 2 7
+  m_EditorClassIdentifier: 
+  questionImage: {fileID: 21300000, guid: 1d5e24e8484296748994cd7f8ece96d8, type: 3}
+  questionText: 'Berat badan siswa (kg) SMP Pelita dari 16 siswa yakni!
+
+    63,
+    58, 46, 57, 64, 52, 60, 46, 54, 55, 58, 65, 46, 46, 62, 56.
+
+    Berapakah median
+    berat badan mereka?
+
+'
+  answerOptions:
+  - 46,0
+  - 56,5
+  - 50,0
+  - 55,5
+  correctAnswerIndex: 1
+  solutionImage: {fileID: 21300000, guid: f104f29033cbc3a41bde9e4471fd144f, type: 3}

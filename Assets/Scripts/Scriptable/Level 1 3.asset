@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b563647d7a82f784bbaf2f39cb9fb2e9, type: 3}
+  m_Name: Level 1 3
+  m_EditorClassIdentifier: 
+  questionImage: {fileID: 21300000, guid: 1d5e24e8484296748994cd7f8ece96d8, type: 3}
+  questionText: "Nilai ulangan statistika siswa kelas VIII adalah sebagai berikut:\n5    
+    6\_    6    \_7     8    \_8     8    7\n10    4    5    6    7    6    6\nNilai
+    rata-rata ulangan tersebut adalah"
+  answerOptions:
+  - 6,6
+  - 6,7
+  - 6,8
+  - 6,9
+  correctAnswerIndex: 0
+  solutionImage: {fileID: 21300000, guid: 5d5e49d3c2724324c88c7356561a6544, type: 3}
