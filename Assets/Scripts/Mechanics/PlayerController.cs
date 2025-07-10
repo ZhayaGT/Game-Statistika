@@ -194,7 +194,7 @@ namespace Platformer.Mechanics
                 if (useMobileControls && (Application.isMobilePlatform || DebugAlwaysUseMobile()))
                 {
                     move.x = mobileMoveInput;
-                    Debug.Log($"[MOBILE INPUT] move.x: {move.x}, platform: {Application.platform}");
+                    //Debug.Log($"[MOBILE INPUT] move.x: {move.x}, platform: {Application.platform}");
                 }
                 else if (playerInput != null && playerInput.actions != null)
                 {
@@ -202,18 +202,18 @@ namespace Platformer.Mechanics
                     {
                         Vector2 moveInput = moveAction.ReadValue<Vector2>();
                         move.x = moveInput.x;
-                        Debug.Log($"[INPUT SYSTEM] move.x: {move.x}");
+                        //Debug.Log($"[INPUT SYSTEM] move.x: {move.x}");
                     }
                     catch (System.Exception e)
                     {
-                        Debug.LogError("Error reading input: " + e.Message);
+                        //Debug.LogError("Error reading input: " + e.Message);
                         move.x = Input.GetAxis("Horizontal");
                     }
                 }
                 else
                 {
                     move.x = Input.GetAxis("Horizontal");
-                    Debug.Log($"[LEGACY INPUT] move.x: {move.x}");
+                    //Debug.Log($"[LEGACY INPUT] move.x: {move.x}");
                 }
             }
 

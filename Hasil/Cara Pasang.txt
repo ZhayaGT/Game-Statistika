@@ -1,0 +1,5 @@
+1. Buat project Unity dengan Universal Render Pipeline
+
+2. Drag and Drop .unitypackage ke Project Window
+
+Jika kurang jelas kamu dapat melihat video. Semangat!!

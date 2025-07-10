@@ -96,6 +96,14 @@ public class MainMenuManager : MonoBehaviour
         // Check if we have a saved level
         int savedLevel = PlayerPrefs.GetInt(playerPrefLastLevelKey, 0);
         
+        // Reset to level 1 if saved level is 4
+        if (savedLevel == 3)
+        {
+            savedLevel = 1;
+            PlayerPrefs.SetInt(playerPrefLastLevelKey, savedLevel);
+            PlayerPrefs.Save();
+        }
+        
         if (savedLevel > 0)
         {
             // Load the saved level
@@ -113,7 +121,7 @@ public class MainMenuManager : MonoBehaviour
         FadeAndLoadScene(nextSceneName);
     }
     
-    private void FadeAndLoadScene(string sceneName)
+    public void FadeAndLoadScene(string sceneName)
     {
         if (fadeImage != null)
         {
@@ -147,7 +155,7 @@ public class MainMenuManager : MonoBehaviour
             profilePanel.transform.localScale = new Vector3(startScale, startScale, startScale);
             
             // Animate scale up
-            profilePanel.transform.DOScale(1f, popupDuration)
+            profilePanel.transform.DOScale(0.1781f, popupDuration)
                 .SetEase(popupEase);
         }
     }

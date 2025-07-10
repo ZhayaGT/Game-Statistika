@@ -23,7 +23,7 @@ public class QuizUIManager : MonoBehaviour
     [SerializeField] private GameObject resultsPanel;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private Button nextLevelButton;
-    [SerializeField] private Button mainMenuButton; // New button for returning to main menu
+    [SerializeField] private Button mainMenuButton; // New button for returning to main men
     [SerializeField] private string mainMenuSceneName = "Main Menu"; // Scene name to load
     [SerializeField] private string playerPrefLastLevelKey = "LastUnlockedLevel"; // Key for storing last level
     [SerializeField] private GameObject perfectScoreObject; // Object to show when score is 100
@@ -52,6 +52,9 @@ public class QuizUIManager : MonoBehaviour
     
     [Header("Player References")]
     [SerializeField] private Platformer.Mechanics.PlayerController playerController;
+    
+    [Header("In-Game UI")]
+    [SerializeField] private Button inGameMainMenuButton; // Button for returning to main menu during gameplay
     
     void Awake()
     {
@@ -92,7 +95,8 @@ public class QuizUIManager : MonoBehaviour
         // Subscribe to events
         if (QuizManager.Instance != null)
         {
-            QuizManager.Instance.OnAllQuizzesCompleted += ShowResults;
+            // Remove this line to prevent automatic showing of results
+            // QuizManager.Instance.OnAllQuizzesCompleted += ShowResults;
         }
         
         // Set up material panel close button
@@ -131,6 +135,18 @@ public class QuizUIManager : MonoBehaviour
                     // Load the main menu scene
                     UnityEngine.SceneManagement.SceneManager.LoadScene(mainMenuSceneName);
                 });
+            });
+        }
+        
+        // Set up in-game main menu button
+        if (inGameMainMenuButton != null)
+        {
+            inGameMainMenuButton.onClick.AddListener(() => {
+                // Unpause the game when main menu button is clicked
+                Time.timeScale = 1f;
+                
+                // Load the main menu scene (index 0)
+                UnityEngine.SceneManagement.SceneManager.LoadScene(0);
             });
         }
         
@@ -330,7 +346,7 @@ public class QuizUIManager : MonoBehaviour
         Time.timeScale = 0f;
     }
     
-    private void ShowResults()
+    public void ShowResults()
     {
         int currentScore = 0;
         
@@ -339,6 +355,11 @@ public class QuizUIManager : MonoBehaviour
         {
             currentScore = QuizManager.Instance.GetCurrentScore();
             scoreText.text = currentScore.ToString();
+            
+            // Save the current level's score to PlayerPrefs
+            int sceneIndex = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
+            PlayerPrefs.SetInt($"Level{sceneIndex}Score", currentScore);
+            PlayerPrefs.Save();
         }
         
         // Show or hide perfect score object based on score
@@ -374,7 +395,20 @@ public class QuizUIManager : MonoBehaviour
     // Call this method from a finish trigger
     public void ShowFinalResults()
     {
-        ShowResults();
+        // Only show results if all quizzes are completed
+        if (QuizManager.Instance != null && 
+            QuizManager.Instance.GetAnsweredQuizzes() >= QuizManager.Instance.GetTotalQuizzes())
+        {
+            ShowResults();
+        }
+        else
+        {
+            // Optional: Show a message that player needs to answer all questions
+            Debug.Log("Player reached finish line but hasn't answered all questions yet");
+            
+            // You could show a different UI panel here to inform the player
+            // that they need to complete all quizzes before finishing
+        }
     }
     
     // Animation helper methods

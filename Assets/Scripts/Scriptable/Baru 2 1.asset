@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b563647d7a82f784bbaf2f39cb9fb2e9, type: 3}
+  m_Name: Baru 2 1
+  m_EditorClassIdentifier: 
+  questionImage: {fileID: 21300000, guid: c778c15abfbd787499e30811b9d2b032, type: 3}
+  questionText: 
+  answerOptions:
+  - 6
+  - 9
+  - 8
+  - 7
+  correctAnswerIndex: 0
+  solutionImage: {fileID: 21300000, guid: ee1479c919bf3414591016ed151010d7, type: 3}

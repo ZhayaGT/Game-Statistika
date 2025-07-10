@@ -1,0 +1,2 @@
+E:\Project Unity\Tutorial Shader\Game-Statistika\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+E:\Project Unity\Tutorial Shader\Game-Statistika\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

@@ -63,10 +63,10 @@ public class QuizManager : MonoBehaviour
         switch (currentSceneIndex)
         {
             case 1:
-                totalQuizzesInLevel = 5;
+                totalQuizzesInLevel = 10;
                 break;
             case 2:
-                totalQuizzesInLevel = 10;
+                totalQuizzesInLevel = 5;
                 break;
             case 3:
                 totalQuizzesInLevel = 5;
@@ -108,6 +108,7 @@ public class QuizManager : MonoBehaviour
         // Check if all quizzes in the level are completed
         if (answeredQuizzes >= totalQuizzesInLevel)
         {
+            // We'll still trigger the event, but won't show UI automatically
             OnAllQuizzesCompleted?.Invoke();
         }
     }

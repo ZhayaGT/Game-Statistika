@@ -10,10 +10,11 @@ public class FinishTrigger : MonoBehaviour
     {
         if (collider.CompareTag(playerTag))
         {
-            // Show the results UI
+            // Show the results UI regardless of questions answered
             if (QuizUIManager.Instance != null)
             {
-                QuizUIManager.Instance.ShowFinalResults();
+                // This will show the results UI even if not all questions are answered
+                QuizUIManager.Instance.ShowResults();
             }
         }
     }
